@@ -35,7 +35,7 @@ extension MainSceneRouter: MainSceneRoutable {
 		let interactorService   = MainSceneInteractorService(withModel: viewModel)
 		let interactor          = MainSceneInteractor(withRouter: router, presenter: presenter, service: interactorService)
 		
-        vc.interactor = interactor
+    vc.interactor = interactor
 		router.view = vc
 		
 		guard let view = router.view else {

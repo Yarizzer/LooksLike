@@ -12,8 +12,8 @@ protocol MainSceneInteractable {
 
 struct MainSceneInteractorRequest {
 	enum RequestType {
-        case initialSetup
-        case viewIsReady
-        case viewWillDisappear
+    case initialSetup
+    case viewIsReady
+    case viewWillDisappear
 	}
 }

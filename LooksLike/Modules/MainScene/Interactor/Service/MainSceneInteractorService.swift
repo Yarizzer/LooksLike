@@ -6,8 +6,8 @@
 //  Copyright (c) 2023 Yaroslav Abaturov. All rights reserved.
 //
 
-protocol MainSceneInteractorServiceType{
-    func setupSubscription()
+protocol MainSceneInteractorServiceType: AnyObject {
+  func setupSubscription()
 }
 
 class MainSceneInteractorService {
@@ -19,5 +19,5 @@ class MainSceneInteractorService {
 }
 
 extension MainSceneInteractorService: MainSceneInteractorServiceType {
-    func setupSubscription() { viewModel.setupSubscription()}
+  func setupSubscription() { viewModel.setupSubscription()}
 }

@@ -9,36 +9,36 @@
 import Foundation
 
 protocol MainSceneViewModelType: AnyObject {
-    //Subscription
-    func setupSubscription()
-    //Publisher
-    var dataDidChanged: Publisher<Bool?> { get }
-    
-    var currentValue: String { get }
-    
-    func getCaptureViewModel() -> CaptureViewModelType
+  //Subscription
+  func setupSubscription()
+  //Publisher
+  var dataDidChanged: Publisher<Bool?> { get }
+  
+  var currentValue: String { get }
+  
+  func getCaptureViewModel() -> CaptureViewModelType
 }
 
 class MainSceneViewModel: NSObject {
-    //Subscription
-    func setupSubscription() {
-        AppCore.shared.mlLayer.data.subscribe(self, closure: extractSelf { sSelf, data in
-            sSelf.data = data.newValue
-        })
+  //Subscription
+  func setupSubscription() {
+    AppCore.shared.mlLayer.data.subscribe(self, closure: extractSelf { sSelf, data in
+      sSelf.data = data.newValue
+    })
+  }
+  
+  //Publisher
+  var dataDidChanged: Publisher<Bool?> = Publisher(nil)
+  
+  private var data: String? {
+    didSet {
+      dataDidChanged.value = true
     }
-    
-    //Publisher
-    var dataDidChanged: Publisher<Bool?> = Publisher(nil)
-    
-    private var data: String? {
-        didSet {
-            dataDidChanged.value = true
-        }
-    }
+  }
 }
 
 extension MainSceneViewModel: MainSceneViewModelType {
-    var currentValue: String { data ?? "" }
-    
-    func getCaptureViewModel() -> CaptureViewModelType { CaptureViewModel() }
+  var currentValue: String { data ?? "" }
+  
+  func getCaptureViewModel() -> CaptureViewModelType { CaptureViewModel() }
 }
