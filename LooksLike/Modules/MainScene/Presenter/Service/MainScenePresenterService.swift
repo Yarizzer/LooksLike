@@ -6,7 +6,7 @@
 //  Copyright (c) 2023 Yaroslav Abaturov. All rights reserved.
 //
 
-protocol MainScenePresenterServiceType{
+protocol MainScenePresenterServiceType: AnyObject {
 	var model: MainSceneViewModelType { get }
 }
 
@@ -19,5 +19,5 @@ class MainScenePresenterService {
 }
 
 extension MainScenePresenterService: MainScenePresenterServiceType {
-	var model: MainSceneViewModelType { return viewModel }
+	var model: MainSceneViewModelType { viewModel }
 }

@@ -8,20 +8,11 @@
 
 import UIKit
 
-protocol MainSceneRoutable {
+protocol MainSceneRoutable: AnyObject {
 	static func assembly() -> UIViewController
-	func routeTo(scene type: MainSceneRoutableContractData.MainSceneRoutableSceneType)
 }
 
 class MainSceneRouter {
-	private func prepareDestinationScene(with type: MainSceneRoutableContractData.MainSceneRoutableSceneType) -> UIViewController {
-		switch type {
-		case .testScene: print("\(self) \(#function) msg: 'Test scene'")
-		}
-		
-		return UIViewController()
-	}
-	
 	private weak var view: MainSceneViewController?
 }
 
@@ -43,10 +34,5 @@ extension MainSceneRouter: MainSceneRoutable {
 		}
 		
 		return view
-	}
-	
-	func routeTo(scene type: MainSceneRoutableContractData.MainSceneRoutableSceneType) {
-		let vc = prepareDestinationScene(with: type)
-		self.view?.present(vc, animated: true)
 	}
 }

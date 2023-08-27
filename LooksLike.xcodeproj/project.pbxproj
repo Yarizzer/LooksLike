@@ -24,7 +24,6 @@
 		7138E60B29F92688000C4F3A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E60A29F92688000C4F3A /* BaseViewController.swift */; };
 		7138E60D29F926A3000C4F3A /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E60C29F926A3000C4F3A /* NibLoadableView.swift */; };
 		7138E61B29F926DC000C4F3A /* MainScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E60F29F926DC000C4F3A /* MainScenePresenter.swift */; };
-		7138E61C29F926DC000C4F3A /* MainSceneRouterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E61029F926DC000C4F3A /* MainSceneRouterContract.swift */; };
 		7138E61D29F926DC000C4F3A /* MainSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E61129F926DC000C4F3A /* MainSceneRouter.swift */; };
 		7138E61E29F926DC000C4F3A /* MainSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E61229F926DC000C4F3A /* MainSceneViewController.swift */; };
 		7138E61F29F926DC000C4F3A /* MainSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E61329F926DC000C4F3A /* MainSceneInteractor.swift */; };
@@ -66,7 +65,6 @@
 		7138E60A29F92688000C4F3A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7138E60C29F926A3000C4F3A /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		7138E60F29F926DC000C4F3A /* MainScenePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScenePresenter.swift; sourceTree = "<group>"; };
-		7138E61029F926DC000C4F3A /* MainSceneRouterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneRouterContract.swift; sourceTree = "<group>"; };
 		7138E61129F926DC000C4F3A /* MainSceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneRouter.swift; sourceTree = "<group>"; };
 		7138E61229F926DC000C4F3A /* MainSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewController.swift; sourceTree = "<group>"; };
 		7138E61329F926DC000C4F3A /* MainSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneInteractor.swift; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 			isa = PBXGroup;
 			children = (
 				7138E61129F926DC000C4F3A /* MainSceneRouter.swift */,
-				7138E61029F926DC000C4F3A /* MainSceneRouterContract.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -513,7 +510,6 @@
 				7138E60729F92584000C4F3A /* AppMLLayer.swift in Sources */,
 				7138E62029F926DC000C4F3A /* MainSceneInteractorService.swift in Sources */,
 				7138E5D229F92339000C4F3A /* AppDelegate.swift in Sources */,
-				7138E61C29F926DC000C4F3A /* MainSceneRouterContract.swift in Sources */,
 				7138E63F29F9289A000C4F3A /* Resnet50.mlmodel in Sources */,
 				7138E60529F92564000C4F3A /* AppMLLayerType.swift in Sources */,
 				7138E5FB29F924B3000C4F3A /* AppUILayerStyleService.swift in Sources */,

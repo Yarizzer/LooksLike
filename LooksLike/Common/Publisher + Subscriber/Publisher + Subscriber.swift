@@ -23,7 +23,7 @@ class Publisher<T> {
     didSet {
       self.cleanDeadSubscribers()
       for subscriber in self.subscribers {
-          subscriber.closure((oldValue, self.value))
+        subscriber.closure((oldValue, self.value))
       }
     }
   }
