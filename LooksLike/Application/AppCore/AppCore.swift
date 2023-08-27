@@ -6,21 +6,21 @@
 //
 
 class AppCore {
-    static let shared = AppCore()
-    
-    private init() {
-        self.uiL = AppUILayer()
-        self.mlL = AppMLLayer()
-    }
-    
-    private let uiL: AppUILayerType
-    private let mlL: AppMLLayerType
+  static let shared = AppCore()
+  
+  private init() {
+    self.uiL = AppUILayer()
+    self.mlL = AppMLLayer()
+  }
+  
+  private let uiL: AppUILayerType
+  private let mlL: AppMLLayerType
 }
 
 extension AppCore: AppCoreUILayerType {
-    var uiLayer: AppUILayerType { uiL }
+  var uiLayer: AppUILayerType { uiL }
 }
 
 extension AppCore: AppCoreAILayerType {
-    var mlLayer: AppMLLayerType { mlL }
+  var mlLayer: AppMLLayerType { mlL }
 }
