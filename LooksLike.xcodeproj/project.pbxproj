@@ -42,6 +42,8 @@
 		7138E63D29F9285E000C4F3A /* CaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E63C29F9285E000C4F3A /* CaptureViewModel.swift */; };
 		7138E63F29F9289A000C4F3A /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7138E63E29F9289A000C4F3A /* Resnet50.mlmodel */; };
 		7138E64229F92FD4000C4F3A /* Publisher + Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138E64129F92FD4000C4F3A /* Publisher + Subscriber.swift */; };
+		71E1E69D2A9B29AE004626B3 /* SelfExtractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E1E69C2A9B29AE004626B3 /* SelfExtractable.swift */; };
+		71E1E69F2A9B29DF004626B3 /* NSObject + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E1E69E2A9B29DF004626B3 /* NSObject + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		7138E63C29F9285E000C4F3A /* CaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewModel.swift; sourceTree = "<group>"; };
 		7138E63E29F9289A000C4F3A /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		7138E64129F92FD4000C4F3A /* Publisher + Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Subscriber.swift"; sourceTree = "<group>"; };
+		71E1E69C2A9B29AE004626B3 /* SelfExtractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfExtractable.swift; sourceTree = "<group>"; };
+		71E1E69E2A9B29DF004626B3 /* NSObject + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 		7138E60829F9266B000C4F3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				71E1E69B2A9B299B004626B3 /* SelfExtractor */,
+				71E1E69A2A9B295E004626B3 /* Extensions */,
 				7138E64029F92FC1000C4F3A /* Publisher + Subscriber */,
 				7138E60A29F92688000C4F3A /* BaseViewController.swift */,
 				7138E60C29F926A3000C4F3A /* NibLoadableView.swift */,
@@ -394,6 +400,22 @@
 			path = "Publisher + Subscriber";
 			sourceTree = "<group>";
 		};
+		71E1E69A2A9B295E004626B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71E1E69E2A9B29DF004626B3 /* NSObject + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		71E1E69B2A9B299B004626B3 /* SelfExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				71E1E69C2A9B29AE004626B3 /* SelfExtractable.swift */,
+			);
+			path = SelfExtractor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -476,6 +498,7 @@
 				7138E62429F926DC000C4F3A /* MainSceneViewControllerContract.swift in Sources */,
 				7138E60029F924FB000C4F3A /* AppUILayerDeviceServiceType.swift in Sources */,
 				7138E62129F926DC000C4F3A /* MainSceneInteractorContract.swift in Sources */,
+				71E1E69F2A9B29DF004626B3 /* NSObject + Extensions.swift in Sources */,
 				7138E61F29F926DC000C4F3A /* MainSceneInteractor.swift in Sources */,
 				7138E63D29F9285E000C4F3A /* CaptureViewModel.swift in Sources */,
 				7138E62629F926DC000C4F3A /* MainScenePresenterService.swift in Sources */,
@@ -495,6 +518,7 @@
 				7138E60529F92564000C4F3A /* AppMLLayerType.swift in Sources */,
 				7138E5FB29F924B3000C4F3A /* AppUILayerStyleService.swift in Sources */,
 				7138E5FD29F924DC000C4F3A /* AppUILayerStyleServiceType.swift in Sources */,
+				71E1E69D2A9B29AE004626B3 /* SelfExtractable.swift in Sources */,
 				7138E5F729F92453000C4F3A /* AppUILayer.swift in Sources */,
 				7138E61B29F926DC000C4F3A /* MainScenePresenter.swift in Sources */,
 			);
