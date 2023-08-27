@@ -6,7 +6,9 @@
 //  Copyright (c) 2023 Yaroslav Abaturov. All rights reserved.
 //
 
-protocol MainSceneViewModelType {
+import Foundation
+
+protocol MainSceneViewModelType: AnyObject {
     //Subscription
     func setupSubscription()
     //Publisher
@@ -17,12 +19,12 @@ protocol MainSceneViewModelType {
     func getCaptureViewModel() -> CaptureViewModelType
 }
 
-class MainSceneViewModel {
+class MainSceneViewModel: NSObject {
     //Subscription
     func setupSubscription() {
-        AppCore.shared.mlLayer.data.subscribe(self) { [weak self] data in
-            self?.data = data.newValue
-        }
+        AppCore.shared.mlLayer.data.subscribe(self, closure: extractSelf { sSelf, data in
+            sSelf.data = data.newValue
+        })
     }
     
     //Publisher
