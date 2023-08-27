@@ -19,5 +19,5 @@ class MainSceneInteractorService {
 }
 
 extension MainSceneInteractorService: MainSceneInteractorServiceType {
-  func setupSubscription() { viewModel.setupSubscription()}
+  func setupSubscription() { viewModel.setupSubscription() }
 }

@@ -8,14 +8,14 @@
 import Foundation
 
 enum FeedbackType {
-    case success, failure
+  case success, failure
 }
 
-protocol AppUILayerDeviceServiceType {
-    var screenSize: CGRect { get }
-    var topPaddingValue: CGFloat { get }
-    var bottomPaddingValue: CGFloat { get }
-    
-    func generateFeedback(with type: FeedbackType)
-    func vibrate()
+protocol AppUILayerDeviceServiceType: AnyObject {
+  var screenSize: CGRect { get }
+  var topPaddingValue: CGFloat { get }
+  var bottomPaddingValue: CGFloat { get }
+  
+  func generateFeedback(with type: FeedbackType)
+  func vibrate()
 }

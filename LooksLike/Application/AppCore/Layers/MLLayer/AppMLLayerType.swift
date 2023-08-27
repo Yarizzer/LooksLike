@@ -8,9 +8,9 @@
 import CoreML
 
 protocol AppMLLayerType {
-    //Publishers
-    var data: Publisher<String?> { get }
-    
-    //Functions
-    func updatePrediction(for image: CVPixelBuffer)
+  //Publishers
+  var data: Publisher<String?> { get }
+  
+  //Functions
+  func updatePrediction(for image: CVPixelBuffer)
 }

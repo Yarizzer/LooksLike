@@ -9,17 +9,17 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private var router: AppRoutable?
+  private var router: AppRoutable?
+  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    router = AppRouter()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        router = AppRouter()
-        
-        routeToInitialScene()
-        
-        return true
-    }
+    routeToInitialScene()
     
-    private func routeToInitialScene() {
-        self.router?.routeToInitialScene()
-    }
+    return true
+  }
+  
+  private func routeToInitialScene() {
+    router?.routeToInitialScene()
+  }
 }
