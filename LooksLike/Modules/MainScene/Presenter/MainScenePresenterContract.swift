@@ -7,13 +7,13 @@
 //
 
 protocol MainScenePresentable {
-    func response(responseType: MainScenePresenterResponse.MainSceneResponseType)
+  func response(responseType: MainScenePresenterResponse.MainSceneResponseType)
 }
 
 struct MainScenePresenterResponse {
 	enum MainSceneResponseType {
-        case initialSetup
-        case viewIsReady
-        case viewWillDisappear
+    case initialSetup
+    case viewIsReady
+    case viewWillDisappear
 	}
 }

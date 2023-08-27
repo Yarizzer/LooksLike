@@ -15,9 +15,9 @@ class MainScenePresenter: NSObject {
 	}
   
   private func setupSubscription() {
-      service.model.dataDidChanged.subscribe(self, closure: extractSelf { sSelf, success in
-        sSelf.viewController?.update(viewModelDataType: .updateLabel(with: sSelf.service.model.currentValue))
-      })
+    service.model.dataDidChanged.subscribe(self, closure: extractSelf { sSelf, success in
+      sSelf.viewController?.update(viewModelDataType: .updateLabel(with: sSelf.service.model.currentValue))
+    })
   }
 	
 	private var viewController: MainSceneViewControllerType?
