@@ -46,8 +46,8 @@ extension MainSceneViewController: MainSceneViewControllerType {
   func update(viewModelDataType: MainSceneViewControllerViewModel.ViewModelDataType) {
     switch viewModelDataType {
     case .initialSetup(let model):  captureView.inject(model: model.getCaptureViewModel())
-    case .viewIsReady:              captureView.awakeSession()
-    case .viewWillDisappear:        captureView.sleepSession()
+    case .viewIsReady:              captureView.awake()
+    case .viewWillDisappear:        captureView.sleep()
     case .updateLabel(let data):    label.text = data
     }
   }

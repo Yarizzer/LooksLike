@@ -7,6 +7,6 @@
 
 import AVFoundation
 
-protocol CaptureViewModelType {
-    func updatePrediction(for image: CVPixelBuffer)
+protocol CaptureViewModelType: AnyObject {
+  func updatePrediction(for image: CVPixelBuffer)
 }

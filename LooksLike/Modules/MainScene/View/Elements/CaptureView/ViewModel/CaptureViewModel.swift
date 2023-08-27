@@ -8,7 +8,7 @@
 import AVFoundation
 
 class CaptureViewModel: CaptureViewModelType {
-    func updatePrediction(for image: CVPixelBuffer) {
-        AppCore.shared.mlLayer.updatePrediction(for: image)
-    }
+  func updatePrediction(for image: CVPixelBuffer) {
+    AppCore.shared.mlLayer.updatePrediction(for: image)
+  }
 }
