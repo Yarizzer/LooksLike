@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseViewController<InteractorT>: UIViewController {
-    override func viewDidLoad() { super.viewDidLoad() }
-    
-    var interactor: InteractorT?
+  override func viewDidLoad() { super.viewDidLoad() }
+  
+  var interactor: InteractorT?
 }

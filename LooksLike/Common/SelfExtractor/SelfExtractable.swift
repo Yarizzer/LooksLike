@@ -10,24 +10,24 @@ import Foundation
 protocol SelfExtractable: NSObject { }
 
 extension SelfExtractable {
-    typealias BasicCall = (Self) -> ()
-    typealias BasicResponse = () -> ()
-    typealias DataCall<T> = (Self, T) -> ()
-    typealias DataResponse<T> = (T) -> ()
-    
-    func extractSelf(code: @escaping BasicCall) -> BasicResponse {
-        return { [weak self] in
-            guard let sSelf = self else { return }
+  typealias BasicCall = (Self) -> ()
+  typealias BasicResponse = () -> ()
+  typealias DataCall<T> = (Self, T) -> ()
+  typealias DataResponse<T> = (T) -> ()
+  
+  func extractSelf(code: @escaping BasicCall) -> BasicResponse {
+    { [weak self] in
+      guard let sSelf = self else { return }
 
-            code(sSelf)
-        }
+      code(sSelf)
     }
-    
-    func extractSelf<T>(_ code: @escaping DataCall<T>) -> DataResponse<T> {
-        return { [weak self] data in
-            guard let sSelf = self else { return }
-            
-            code(sSelf, data)
-        }
+  }
+  
+  func extractSelf<T>(_ code: @escaping DataCall<T>) -> DataResponse<T> {
+    { [weak self] data in
+      guard let sSelf = self else { return }
+      
+      code(sSelf, data)
     }
+  }
 }
