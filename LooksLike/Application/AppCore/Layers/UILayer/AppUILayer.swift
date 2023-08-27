@@ -6,16 +6,16 @@
 //
 
 class AppUILayer {
-    init() {
-        self.styleService = AppUILayerStyleService()
-        self.deviceService = AppUILayerDeviceService()
-    }
-    
-    private let styleService: AppUILayerStyleServiceType
-    private let deviceService: AppUILayerDeviceServiceType
+  init() {
+    self.styleS = AppUILayerStyleService()
+    self.deviceS = AppUILayerDeviceService()
+  }
+  
+  private let styleS: AppUILayerStyleServiceType
+  private let deviceS: AppUILayerDeviceServiceType
 }
 
 extension AppUILayer: AppUILayerType {
-    var style: AppUILayerStyleServiceType { styleService }
-    var device: AppUILayerDeviceServiceType { deviceService }
+  var style: AppUILayerStyleServiceType { styleS }
+  var device: AppUILayerDeviceServiceType { deviceS }
 }
